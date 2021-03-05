@@ -23,6 +23,7 @@ const Register = () => {
     history.push("/Kitchen");
   };
 
+  
   const handleSubmit = (event) => {
     event.preventDefault();
 
