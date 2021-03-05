@@ -9,17 +9,17 @@ const NavBar = () => {
             <nav className={styles.conteiner}>
                 <ul className={styles.navigation}>
                     <li>
-                        <Link to="/">Login</Link>
-                    </li>
-                    <li>
-                        <Link to="/Register">Register</Link>
-                    </li>
-                    <li>
-                        <Link to="/Hall">Hall</Link>
-                    </li>
-                    <li>
-                        <Link to="/Kitchen">Kitchen</Link>
-                    </li>
+//                         <Link to="/">Login</Link>
+//                     </li>
+//                     <li>
+//                         <Link to="/Register">Register</Link>
+//                     </li>
+//                     <li>
+//                         <Link to="/Hall">Hall</Link>
+//                     </li>
+//                     <li>
+//                         <Link to="/Kitchen">Kitchen</Link>
+//                     </li>
 
                     <li>
                     <Link to="/">Sair</Link>
