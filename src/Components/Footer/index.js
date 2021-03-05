@@ -20,7 +20,7 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Sara Siva
+          Sara Silva
         </a>
         &emsp;&emsp;
       </footer>
