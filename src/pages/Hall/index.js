@@ -63,6 +63,7 @@ function Hall() {
 
   return (
     <div>
+      <h1>Hall</h1>
       <h2>CARDÁPIO</h2>
 
       {produtos.map((produto) => (

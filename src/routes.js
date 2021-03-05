@@ -18,10 +18,6 @@ function Routes() {
                 <Route path="/Register"component={Register} />
                 <Route path="/Hall" component={Hall} /> 
                 <Route path="/Kitchen"component={Kitchen} />
-
-                
-               
-                
             </Switch>
         </BrowserRouter>
         

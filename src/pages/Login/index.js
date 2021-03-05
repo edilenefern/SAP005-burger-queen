@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, {useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import Logo from '../../Components/Logo';
+import Footer from '../../Components/Footer';
 import styles from './login.module.css';
 // import MailIcon from '../Icons/MailIcon.png';
 // import PadlockIcon from '../Icons/PadlockIcon.png';
@@ -93,7 +94,11 @@ function Login() {
         
         </form>
       </div>
+
+      <Footer/>
     </div>
+    
+
   );
 }
 export default Login;

@@ -26,6 +26,7 @@ const [produtos, setProdutos] = useState([]);
      
   return (
       <div>
+        <h1>Kitchen</h1>
       {produtos.price} 
     </div>
   )
