@@ -19,14 +19,14 @@ const [produtos, setProdutos] = useState([]);
       .then((data) => {
         setProdutos(data);
         })
-      },[])
+      },[token])
 
   
         
      
   return (
       <div>
-      
+      {produtos.price} 
     </div>
   )
 }
@@ -37,19 +37,4 @@ const [produtos, setProdutos] = useState([]);
 
     
 export default Kitchen;
-// {/* {produtos.map(produto => (
-//         <div key={produto.id} onClick={()=> {
-//           console.log(produto.name)
-//         }} >
-//           {/* <p>{produto.id}</p> */}
-//           {/* <p>{produto.name}</p>
-//           <p>{produto.flavor}</p>
-//           <p>{produto.complement}</p>
-//           <p>R${produto.price}Total:</p> */}
-//           {/* <p>{produto.image}</p> */}
-//           {/* <p>{produto.type}</p>
-//           <p>{produto.subtype}</p> */}
-       
-//         {/* </div> */}
-//       // ))
-//   // } */}
+
