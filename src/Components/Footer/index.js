@@ -1,17 +1,18 @@
 import React from "react";
+import styles from "./footer.module.css";
 
 function Footer() {
   return (
-    <div>
-      <footer>
-        Desenvolvido por : &nbsp;
+    <div className={styles.conteiner}>
+      <footer className={styles.content}>
+        {/* Desenvolvido por : &nbsp; */}
         <a
           href="https://github.com/edilenefern"
           title="GitHub"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Edilene de Oiveira Fernandes
+          Edilene Fernandes
         </a>
         e &nbsp;&nbsp;
         <a

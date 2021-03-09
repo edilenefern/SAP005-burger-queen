@@ -1,0 +1,44 @@
+.sectorTitle{
+    text-transform: uppercase;
+    padding: 20px 5px;
+}
+
+.content{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: baseline;
+	align-content: center;
+}
+
+.title{
+    padding: 0px 0px 15px 0px;
+}
+
+.menu{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+    border: 3px solid #DAA520;
+    border-radius: 15px;
+    padding: 45px 45px;
+    overflow:auto;
+    height: 800px;
+    /* #DAA520 */
+}
+
+.contentMenu{
+    padding: 15px 0px 15px 0px;
+}
+
+.commands{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid #DAA520;
+    border-radius: 15px;
+    padding: 45px 45px;
+}
