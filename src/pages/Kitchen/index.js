@@ -54,6 +54,7 @@ import React from "react";
     <div>
       <h1>Kitchen</h1>
       {/* <button onClick={() => pedidoPronto()}>Enviar Pedido  para o Hall</button> */}
+      
     </div>
     
   
