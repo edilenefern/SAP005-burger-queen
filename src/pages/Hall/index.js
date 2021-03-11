@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./hall.module.css"
+import IconHall from "../Icons/IconHall";
 
 function Hall() {
   const token = localStorage.getItem("token");
@@ -64,12 +65,13 @@ function Hall() {
 
   return (
     <div className={styles.conteiner}>
-      <header className={styles.sector}>
+      <div className={styles.sector}>
         <h1 className={styles.sectorTitle}>Hall</h1> 
-      </header>
+      </div>
 
       <div className={styles.content}>
         <div className={styles.menu}>
+
           <h2 className={styles.title}>CARDÁPIO</h2>
           <div className={styles.contentMenu}>
             {produtos.map((produto) => (
@@ -87,7 +89,7 @@ function Hall() {
                 <p>{produto.name}</p>
                 <p>{produto.flavor}</p>
                 <p>{produto.complement}</p>
-                <button>R$ {produto.price}</button>
+                <button className={styles.price}>R$ {produto.price}</button>
 
                 {/* <p>{produto.image}</p> */}
                 {/* <button>{produto.type}</button>
@@ -103,12 +105,12 @@ function Hall() {
             {pedido.map((produto) => (
               // <div key={produto.id} onClick={() => {}}>
               <div>
-                <tr>
+                <tr className={styles.table}>
                   {/* <p>{produto.id}</p> */}
                   <td>{produto.name}</td>
                   <td>{produto.flavor}</td>
                   <td>{produto.complement}</td>
-                  <td>R$ {produto.price} </td>
+                  <td className={styles.price}>R$ {produto.price} </td>
                   {/* <p>{produto.image}</p> */}
                   <td>{produto.type}</td>
                   <td>{produto.subtype}</td>
