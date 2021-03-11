@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Logo from '../../Components/Logo';
 import styles from './register.module.css';
+import Footer from '../../Components/Footer';
 // import mailIcon from '../Icons/MailIcon.png';
 // import padlockIcon from '../Icons/PadlockIcon.png';
 // import userIcon from '../Icons/UserIcon.png';
@@ -137,6 +138,7 @@ const Register = () => {
           </button>
         </form>
       </div>
+      <Footer/>
     </div>
   );
 };

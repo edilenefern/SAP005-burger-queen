@@ -1,4 +1,16 @@
+
+.sector{
+    display: flex;
+	flex-direction: column;
+	/* flex-wrap: nowrap; */
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
 .sectorTitle{
+    color: #DAA520;
+
     text-transform: uppercase;
     padding: 20px 5px;
 }
@@ -13,17 +25,22 @@
 }
 
 .title{
+
+    color: #DAA520;
+
     padding: 0px 0px 15px 0px;
 }
 
 .menu{
     display: flex;
     /* justify-content: center; */
-    /* align-items: center; */
+
+    align-items: center;
     flex-direction: column;
     border: 3px solid #DAA520;
     border-radius: 15px;
-    padding: 45px 45px;
+    padding: 35px 35px;
+
     overflow:auto;
     height: 800px;
     /* #DAA520 */
@@ -33,12 +50,61 @@
     padding: 15px 0px 15px 0px;
 }
 
+
 .commands{
     display: flex;
     justify-content: center;
+
+.price{
+    color: black;
+    background-color: #DAA520;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.table, .totalCommands{
+    padding: 10px 0px 10px 0px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    /* background-color: #fff6e1; */
+}
+
+.commands{
+    display: flex;
+    /* justify-content: center; */
+
     align-items: center;
     flex-direction: column;
     border: 3px solid #DAA520;
     border-radius: 15px;
-    padding: 45px 45px;
+
+    padding: 35px 35px;
+    overflow:auto;
+    max-height: 800px;
 }
+
+.totalCommands{
+    color: black;
+    background-color: #DAA520;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #DAA520; 
+    border-radius: 10px;
+}
+  
+

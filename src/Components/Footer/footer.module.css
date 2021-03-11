@@ -1,0 +1,16 @@
+.contentFooter{
+    color: white;
+    background-color: #000000;
+    border: 1px;
+    border-style:ridge ;
+    border-color:#F2C94C;
+    padding: 2px 2px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    position: fixed;
+    /* left: 0; */
+    bottom: 0;
+    width: 100%;
+}
