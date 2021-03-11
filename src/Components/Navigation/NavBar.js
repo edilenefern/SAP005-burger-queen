@@ -8,7 +8,7 @@ const NavBar = () => {
         <header>                    
             <nav className={styles.conteiner}>
                 <ul className={styles.navigation}>
-//                     <li>
+{/* //                     <li>
 //                         <Link to="/">Login</Link>
 //                     </li>
 //                     <li>
@@ -19,11 +19,12 @@ const NavBar = () => {
 //                     </li>
 //                     <li>
 //                         <Link to="/Kitchen">Kitchen</Link>
-//                     </li>
+//                     </li> */}
 
                     <li>
                     <Link to="/">Sair</Link>
                     </li>
+                   
         
                 </ul>
             </nav>
