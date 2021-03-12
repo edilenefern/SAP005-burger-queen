@@ -34,7 +34,7 @@ function Hall() {
     return acc + valorAtual.price;
   }, 0);
 
-  // console.log(produtos)
+   console.log(produtos)
   // const Finalizar = () => {
   //Aqui está mostrando o pedido finalizado no console
     // console.log(pedido);
