@@ -9,11 +9,12 @@ const NavBar = () => {
             <nav className={styles.conteiner}>
                 <ul className={styles.navigation}>
 
-
-
-                    <li>
+                 <li>
                         <Link to="/">Sair</Link>
-                    </li>
+                    
+
+                    <li/>
+                      
                    
         
                 </ul>
