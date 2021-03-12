@@ -1,23 +1,14 @@
-import React, { useState, useEffect } from "react"; 
 import React, { useState, useEffect } from "react";
-import React, { useState, useEffect } from "react";
-import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-
-import styles from "./hall.module.css"
-import IconHall from "../Icons/IconHall";
-
+// import styles from "./hall.module.css"
 
 function Hall() {
-  // const history = useHistory();
   const token = localStorage.getItem("token");
-  const [products, setProducts] = useState([]);
+  const [produtos, setProdutos] = useState([]);
   const [pedido, setPedido] = useState([]);
-  // const [table, setTable] = useState("");
-  // const [client, setClient] = useState("");
-
- 
-
+  // const [total, setTotal] = useState([])
+  // const [count, setCount] = useState([]);
+  // const [price,setPrice] = useState([]);
+  // const [id, setId] = useState([]);
   useEffect(() => {
     fetch("https://lab-api-bq.herokuapp.com/products", {
       method: "GET",
@@ -28,93 +19,35 @@ function Hall() {
     })
       .then((response) => response.json())
       .then((data) => {
-        setProducts(data);
+        setProdutos(data);
       });
   }, [token]);
-
   function adicionarProduto(produto) {
     console.log(produto);
     setPedido([...pedido, produto]);
+    
   }
-
   const somaPedidos = pedido.reduce((acc, valorAtual) => {
     console.log(valorAtual);
     return acc + valorAtual.price;
   }, 0);
-
   // console.log(produtos)
-  const Finalizar = () => {
-    // history.push("/kitchen");
-    // // Aqui está mostrando o pedido finalizado no console
-    //   console.log(pedido);
-
-    fetch("https://lab-api-bq.herokuapp.com/orders", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `${token}`,
-      },
-
-      body: {
-        
-          id: 0,
-          client_name: "",
-          user_id: 0,
-          table: 0,
-          status: " ",
-          processedAt: "",
-          createdAt: "",
-          updatedAt: "",
-          Products: [
-            {
-              id: 0,
-              name: "",
-              flavor: "",
-              complement: "",
-              qtd: 0,
-            }
-          ]
-        }
-      // },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setPedido(data);
-      });
-  };
-
+  // const Finalizar = () => {
+  //Aqui está mostrando o pedido finalizado no console
+    // console.log(pedido);
+  // };
+  
   // }
+	
 
   return (
-
-    <div>
-      <h1>Hall</h1>
-      <h2>CARDÁPIO</h2>
-
-      {products.map((produto) => (
-        <div
-          key={produto.id}
-          onClick={() => {
-            adicionarProduto(produto);
-          }}
-        >
-          {/* <p>{produto.id}</p> */}
-
-          {/* <p>{produto.type}</p> */}
-          {/* <p>{produto.subtype}</p> */}
-          <p>{produto.name}</p>
-          <p>{produto.flavor}</p>
-          <p>{produto.complement}</p>
-          <button>R$ {produto.price}</button>
     <div className={styles.conteiner}>
-      <div className={styles.sector}>
+      <header className={styles.sector}>
         <h1 className={styles.sectorTitle}>Hall</h1> 
-      </div>
-
+      </header>
 
       <div className={styles.content}>
         <div className={styles.menu}>
-
           <h2 className={styles.title}>CARDÁPIO</h2>
           <div className={styles.contentMenu}>
             {produtos.map((produto) => (
@@ -126,13 +59,12 @@ function Hall() {
                 }}
               >
                 {/* <p>{produto.id}</p> */}
-
                 {/* <p>{produto.type}</p> */}
                 <p>{produto.subtype}</p>
                 <p>{produto.name}</p>
                 <p>{produto.flavor}</p>
                 <p>{produto.complement}</p>
-                <button className={styles.price}>R$ {produto.price}</button>
+                <button>R$ {produto.price}</button>
 
                 {/* <p>{produto.image}</p> */}
                 {/* <button>{produto.type}</button>
@@ -141,35 +73,31 @@ function Hall() {
             ))}
           </div>
         </div>
-
-
+        <div className={styles.commands}>        
+          <h2 className={styles.title}>COMANDA</h2>
+          <div className={styles.contentCommands}>
+            {pedido.map((produto) => (
+              // <div key={produto.id} onClick={() => {}}>
               <div>
-                <tr className={styles.table}>
+                <tr>
                   {/* <p>{produto.id}</p> */}
                   <td>{produto.name}</td>
                   <td>{produto.flavor}</td>
                   <td>{produto.complement}</td>
-                  <td className={styles.price}>R$ {produto.price} </td>
-
+                  <td>R$ {produto.price} </td>
                   {/* <p>{produto.image}</p> */}
                   <td>{produto.type}</td>
                   <td>{produto.subtype}</td>
                 </tr>
-
-              </div>
-            </div>
-          ))}
-
-           
+              </div>                        
+            ))}
             <div className={styles.totalCommands}>TOTAL:R${somaPedidos}</div>
           </div>
-
         </div>
       </div>
       {/* Aqui mostra o pedido finalizado no console */}
-      <button onClick={() => Finalizar()}>Finalizar Pedido </button>
+      {/* <button onClick={() => Finalizar()}>Finalizar Pedido </button> */}
     </div>
   );
 }
-
 export default Hall;
