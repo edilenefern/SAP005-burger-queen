@@ -10,7 +10,6 @@ function Hall() {
   // const [count, setCount] = useState([]);
   // const [price,setPrice] = useState([]);
   // const [id, setId] = useState([]);
-
   useEffect(() => {
     fetch("https://lab-api-bq.herokuapp.com/products", {
       method: "GET",
@@ -24,54 +23,32 @@ function Hall() {
         setProdutos(data);
       });
   }, [token]);
-
   function adicionarProduto(produto) {
     console.log(produto);
     setPedido([...pedido, produto]);
     
   }
-
   const somaPedidos = pedido.reduce((acc, valorAtual) => {
     console.log(valorAtual);
     return acc + valorAtual.price;
   }, 0);
-
   // console.log(produtos)
   // const Finalizar = () => {
   //Aqui está mostrando o pedido finalizado no console
     // console.log(pedido);
   // };
   
-
   // }
-  // fetch("https://lab-api-bq.herokuapp.com/orders", {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //     Authorization: `${token}`,
-  //   },
-
-  //   body:{
-  //     client:"",
-  //     table:"",
-  //     products:[],
-
-  //   }
-  // })
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     setProdutos(data);
-  //   });
+	
 
   return (
     <div className={styles.conteiner}>
-      <div className={styles.sector}>
+      <header className={styles.sector}>
         <h1 className={styles.sectorTitle}>Hall</h1> 
-      </div>
+      </header>
 
       <div className={styles.content}>
         <div className={styles.menu}>
-
           <h2 className={styles.title}>CARDÁPIO</h2>
           <div className={styles.contentMenu}>
             {produtos.map((produto) => (
@@ -83,7 +60,6 @@ function Hall() {
                 }}
               >
                 {/* <p>{produto.id}</p> */}
-
                 {/* <p>{produto.type}</p> */}
                 <p>{produto.subtype}</p>
                 <p>{produto.name}</p>
@@ -98,7 +74,6 @@ function Hall() {
             ))}
           </div>
         </div>
-
         <div className={styles.commands}>        
           <h2 className={styles.title}>COMANDA</h2>
           <div className={styles.contentCommands}>
@@ -126,5 +101,4 @@ function Hall() {
     </div>
   );
 }
-
 export default Hall;

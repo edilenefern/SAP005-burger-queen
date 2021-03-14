@@ -9,6 +9,7 @@
 
 .sectorTitle{
     color: #DAA520;
+
     text-transform: uppercase;
     padding: 20px 5px;
 }
@@ -35,6 +36,7 @@
     border: 3px solid #DAA520;
     border-radius: 15px;
     padding: 35px 35px;
+
     overflow:auto;
     height: 800px;
 }
@@ -43,6 +45,12 @@
     padding: 15px 0px 15px 0px;
     color: #000000;
 }
+
+
+/* .commands{
+    display: flex;
+    justify-content: center;
+} */
 
 .price{
     color: rgb(250, 246, 246);
@@ -71,6 +79,7 @@
     border: 3px solid #DAA520;
     background-color: #DAA520;
     border-radius: 15px;
+
     padding: 35px 35px;
     overflow:auto;
     max-height: 800px;
@@ -97,3 +106,4 @@
     border-radius: 10px;
 }
   
+

@@ -1,41 +1,68 @@
-// import React from 'react'
-import React, { useState ,useEffect} from "react";
- 
-    function Kitchen(){
-  
+import React from "react";
+// , {  useState, useEffect }
 
-const token = localStorage.getItem("token");
-const [produtos, setProdutos] = useState([]);
+  function Kitchen() {
+//   const [pedidoPronto, setpedidoPronto] = useState([]);
+//   const [token]= useState([]);
+//   console.log(pedido);
 
-  useEffect(() => {
-    fetch("https://lab-api-bq.herokuapp.com/orders", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            Authorization: `${token}`,
-        },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setProdutos(data);
-        })
-      },[token])
 
-  
-        
-     
+
+//   useEffect(() => {
+
+//    const pedidoPronto = () => {
+//   fetch("https://lab-api-bq.herokuapp.com/orders", 
+//   {
+//     method: "GET",
+//     headers: {
+//       "Content-Type": "application/json",
+//       Authorization: `${token}`,
+//     },
+
+//     body: {
+       
+//         id: 0,
+//         client_name: "",
+//         user_id: 0,
+//         table: 0,
+//         status: " ",
+//         processedAt: "",
+//         createdAt: "",
+//         updatedAt: "",
+//         Products: [
+//           {
+//             id: 0,
+//             name: "",
+//             flavor: "",
+//             complement: "",
+//             qtd: 0,
+//           }
+//         ]
+//       }
+//     // }
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       setpedidoPronto(data);
+//     });
+// //  });
+// }, [token]);
+//  };
+
+
   return (
-      <div>
-        <h1>Kitchen</h1>
-      {produtos.price} 
+    <div>
+      <h1>Kitchen</h1>
+      {/* <button onClick={() => pedidoPronto()}>Enviar Pedido  para o Hall</button> */}
+      
     </div>
+    
+  
   )
 }
-      
-  
-
-
-
-    
 export default Kitchen;
+
+// get
+// update
+
 
