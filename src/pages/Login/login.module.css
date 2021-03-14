@@ -3,14 +3,6 @@
 	justify-content: center;
 	text-align: center;
 }
-/* 
-@media (max-width: 1024px){
-	.firstContent{
-		flex-direction:row;
-		justify-content: flex-start;
-		align-items: center;
-	}
-} */
 
 .secondContent{	
 	display: flex;
@@ -47,12 +39,6 @@
 	border-radius: 15px;
 }
 
-/* .icon{
-	position: absolute;
-	width: 30px;
-	height: 30px;	
-} */
-
 .button{
 	width: 115px;
 	height: 42px;
@@ -60,6 +46,7 @@
 	border-radius: 15px;
 	text-transform: uppercase;
 	font-weight: bold;
+	cursor: pointer;
 }
 
 .noRegister{

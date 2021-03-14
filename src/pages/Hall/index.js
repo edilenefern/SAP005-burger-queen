@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./hall.module.css"
-import IconHall from "../Icons/IconHall";
+// import IconHall from "../Icons/IconHall";
 
 function Hall() {
   const token = localStorage.getItem("token");

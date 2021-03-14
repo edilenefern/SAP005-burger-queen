@@ -23,32 +23,34 @@
 }
 
 .title{
-    color: #DAA520;
+    color: #000000;
     padding: 0px 0px 15px 0px;
 }
 
 .menu{
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
+    background-color:#DAA520;
     border: 3px solid #DAA520;
     border-radius: 15px;
     padding: 35px 35px;
     overflow:auto;
     height: 800px;
-    /* #DAA520 */
 }
 
 .contentMenu{
     padding: 15px 0px 15px 0px;
+    color: #000000;
 }
 
 .price{
-    color: black;
-    background-color: #DAA520;
+    color: rgb(250, 246, 246);
+    background-color: #000000;
     padding: 5px;
     border-radius: 6px;
+    box-shadow: 5px 4px 4px rgb(99, 99, 93);
+    cursor: pointer;
 }
 
 .table, .totalCommands{
@@ -59,15 +61,15 @@
     flex-direction: column;
     align-items: center;
     text-transform: uppercase;
-    /* background-color: #fff6e1; */
 }
 
 .commands{
     display: flex;
-    /* justify-content: center; */
+    color: black;
     align-items: center;
     flex-direction: column;
     border: 3px solid #DAA520;
+    background-color: #DAA520;
     border-radius: 15px;
     padding: 35px 35px;
     overflow:auto;
@@ -75,9 +77,10 @@
 }
 
 .totalCommands{
-    color: black;
-    background-color: #DAA520;
+    color: rgb(255, 251, 251);
+    background-color: #000000;
     border-radius: 15px;
+    box-shadow: 8px 5px 5px rgb(99, 99, 93);
 }
 
 ::-webkit-scrollbar {
@@ -85,12 +88,12 @@
 }
 
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
+    box-shadow: inset 0 0 5px rgb(0, 0, 0); 
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #DAA520; 
+    background: #000000; 
     border-radius: 10px;
 }
   
